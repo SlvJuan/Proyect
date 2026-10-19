@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CycloControl</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-[#030A1A]">
+
+    <!-- Header / Navbar Responsive -->
+    <header
+        class="h-20 px-4 md:px-12 lg:px-20 flex items-center justify-between sticky top-0 z-30 backdrop-blur-md bg-white/80 border-b border-gray-100">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <img src="./img/login.svg" alt="CycloControl Logo" class="h-12 w-12 md:h-16 md:w-16">
+            <span class="text-xl md:text-2xl font-black text-[#030A1A]">Cyclo<span
+                    class="text-[#C8E34D]">Control</span></span>
+        </div>
+
+        <!-- Navegación Escritorio -->
+        <nav class="hidden md:block">
+            <ul class="gap-6 flex text-[#030A1A] font-medium text-sm lg:text-base">
+                <li class="transition-all hover:scale-105"><a href="#inicio">Inicio</a></li>
+                <li class="transition-all hover:scale-105"><a href="#comofunciona">¿Cómo funciona?</a></li>
+                <li class="transition-all hover:scale-105"><a href="#talleres">Talleres</a></li>
+                <li class="transition-all hover:scale-105"><a href="#nosotros">Nosotros</a></li>
+            </ul>
+        </nav>
+
+        <div class="hidden md:block">
+            <a href="./IniciarSesion/index.html"
+                class="text-[#030A1A] font-bold bg-[#C8E34D] py-2 px-5 rounded-lg inline-block hover:bg-[#b0cc3e] transition-all duration-300 hover:scale-105 text-sm md:text-base">
+                Iniciar Sesión
+            </a>
+        </div>
+        
+
+        <!-- Botón Menú Móvil -->
+        <button id="menu-btn" class="md:hidden text-[#030A1A] focus:outline-none p-2">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-4 flex-col gap-4 text-[#030A1A] font-medium">
+        <a href="#inicio" class="hover:text-[#C8E34D]">Inicio</a>
+        <a href="#comofunciona" class="hover:text-[#C8E34D]">¿Cómo funciona?</a>
+        <a href="#talleres" class="hover:text-[#C8E34D]">Talleres</a>
+        <a href="#nosotros" class="hover:text-[#C8E34D]">Nosotros</a>
+        <a href="./IniciarSesion/index.html"
+            class="text-center text-[#030A1A] font-bold bg-[#C8E34D] py-2 px-4 rounded-lg hover:bg-[#b0cc3e]">Iniciar
+            Sesión</a>
+    </div>
+
+    <!-- Section Inicio -->
+    <section
+        class="scroll-mt-20 min-h-[calc(100vh-5rem)] max-w-6xl mx-auto px-4 py-10 flex flex-col-reverse md:flex-row justify-center items-center gap-8"
+        id="inicio">
+        <!-- Section Text -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#030A1A] mb-4 leading-tight">
+                Tu bicicleta,<br><span class="text-[#C8E34D]">nuestra pasión.</span>
+            </h1>
+            <p class="mb-6 text-gray-700 text-sm sm:text-base leading-relaxed">
+                Encuentra talleres de bicicletas cerca de ti, consulta sus servicios y solicita una cita de manera
+                rápida y sencilla.
+            </p>
+            <a href="./Registro/index.html"
+                class="text-[#030A1A] font-bold bg-[#C8E34D] py-3 px-8 rounded-lg inline-block hover:bg-[#b0cc3e] transition-all duration-300 hover:scale-105">
+                Registrar Usuario
+            </a>
+        </div>
+
+        <!-- Section Img -->
+        <div class="w-full md:w-1/2 flex justify-center">
+            <img src="./img/login.svg" alt="Ilustración principal"
+                class="max-w-xs sm:max-w-sm md:max-w-md w-full h-auto">
+        </div>
+    </section>
+
+    <!-- Section ¿Cómo funciona?-->
+    <section class="scroll-mt-20 bg-[#030A1A] min-h-[90vh] py-16 px-4 flex flex-col justify-center items-center"
+        id="comofunciona">
+        <div class="w-full max-w-7xl mx-auto flex flex-col items-center">
+
+            <!-- Encabezado -->
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-black text-white mb-3">¿Cómo funciona?</h2>
+                <div class="bg-[#C8E34D] h-1 w-20 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+
+                <!-- Tarjeta 1 -->
+                <div
+                    class="border-[#F8FAFC]/20 border rounded-2xl p-6 flex flex-col items-center text-center bg-[#030A1A] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-[#C8E34D]">
+                    <div class="w-16 h-16 border-[#C8E34D] border rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-white">
+                            <path d="m21 21-4.34-4.34" />
+                            <circle cx="11" cy="11" r="8" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Encuentra</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Busca talleres disponibles cerca de ti.</p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div
+                    class="border-[#F8FAFC]/20 border rounded-2xl p-6 flex flex-col items-center text-center bg-[#030A1A] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-[#C8E34D]">
+                    <div class="w-16 h-16 border-[#C8E34D] border rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-white">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                            <path d="m9 11 3 3L22 4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Elige</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Consulta los servicios que ofrece cada taller.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div
+                    class="border-[#F8FAFC]/20 border rounded-2xl p-6 flex flex-col items-center text-center bg-[#030A1A] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-[#C8E34D]">
+                    <div class="w-16 h-16 border-[#C8E34D] border rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-white">
+                            <path d="M8 2v3" />
+                            <path d="M16 2v3" />
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agenda</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Selecciona el servicio que necesitas y elige fecha
+                        y hora.</p>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div
+                    class="border-[#F8FAFC]/20 border rounded-2xl p-6 flex flex-col items-center text-center bg-[#030A1A] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-[#C8E34D]">
+                    <div class="w-16 h-16 border-[#C8E34D] border rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-white">
+                            <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Confirma</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">Recibe la información de tu cita y listo.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Talleres Destacados -->
+    <section class="scroll-mt-20 max-w-6xl mx-auto py-16 px-4" id="talleres">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-[#030A1A]">Talleres Destacados</h2>
+            <p class="text-gray-500 mt-2">Los centros mecánicos mejor calificados por nuestra comunidad.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+            <div
+                class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gray-200 relative">
+                    <span
+                        class="absolute top-4 right-4 bg-[#C8E34D] text-[#030A1A] font-bold text-xs px-3 py-1 rounded-full">Abierto</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-[#030A1A]">Ruta Alterna Bike Clinic</h3>
+                    <p class="text-sm text-gray-500 my-2">📍 A 1.2 km de tu ubicación</p>
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <span>⭐⭐⭐⭐⭐</span> <span class="text-gray-600 font-medium">(4.8)</span>
+                    </div>
+                    <a href="#"
+                        class="w-full text-center block bg-[#030A1A] text-white font-bold py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        Ver Perfil
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gray-200 relative">
+                    <span
+                        class="absolute top-4 right-4 bg-[#C8E34D] text-[#030A1A] font-bold text-xs px-3 py-1 rounded-full">Abierto</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-[#030A1A]">Ruta Alterna Bike Clinic</h3>
+                    <p class="text-sm text-gray-500 my-2">📍 A 1.2 km de tu ubicación</p>
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <span>⭐⭐⭐⭐⭐</span> <span class="text-gray-600 font-medium">(4.8)</span>
+                    </div>
+                    <a href="#"
+                        class="w-full text-center block bg-[#030A1A] text-white font-bold py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        Ver Perfil
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gray-200 relative">
+                    <span
+                        class="absolute top-4 right-4 bg-[#C8E34D] text-[#030A1A] font-bold text-xs px-3 py-1 rounded-full">Abierto</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl text-[#030A1A]">Ruta Alterna Bike Clinic</h3>
+                    <p class="text-sm text-gray-500 my-2">📍 A 1.2 km de tu ubicación</p>
+                    <div class="flex items-center gap-1 text-amber-500 text-sm mb-4">
+                        <span>⭐⭐⭐⭐⭐</span> <span class="text-gray-600 font-medium">(4.8)</span>
+                    </div>
+                    <a href="#"
+                        class="w-full text-center block bg-[#030A1A] text-white font-bold py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                        Ver Perfil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Sobre Nosotros -->
+    <section class="scroll-mt-20 bg-white py-16 px-4 border-t border-gray-100" id="nosotros">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-black text-[#030A1A] mb-2">Sobre nosotros</h2>
+            <div class="bg-[#C8E34D] h-1 w-20 mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-600 max-w-xl mx-auto mb-12">
+                En <span class="font-bold text-[#030A1A]">CycloControl</span> trabajamos para simplificar la gestión de
+                mantenimientos y conectar a los ciclistas con los mejores talleres.
+            </p>
+
+            <!-- Tarjetas de Integrantes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Juan Diego -->
+                <div
+                    class="bg-gray-50 border border-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-14 h-14 bg-[#030A1A] text-[#C8E34D] font-bold text-xl rounded-full flex items-center justify-center">
+                            JS
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#030A1A]">Juan Diego Silvestre Rubiano</h3>
+                            <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">Desarrollador /
+                                Contacto</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-[#030A1A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <a href="tel:3212661685" class="hover:text-[#030A1A] transition-colors">321 266 1685</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-[#030A1A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:juansilvestre015@gmail.com"
+                                class="hover:text-[#030A1A] transition-colors break-all">juansilvestre015@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kevin Andres -->
+                <div
+                    class="bg-gray-50 border border-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-14 h-14 bg-[#030A1A] text-[#C8E34D] font-bold text-xl rounded-full flex items-center justify-center">
+                            KV
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-[#030A1A]">Kevin Andres Villanueva</h3>
+                            <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">Desarrollador /
+                                Contacto</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-[#030A1A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <a href="tel:300000000" class="hover:text-[#030A1A] transition-colors">300 000 000</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-[#030A1A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <a href="mailto:kevin.prueba@gmail.com"
+                                class="hover:text-[#030A1A] transition-colors break-all">kevin.prueba@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script JavaScript para Menú Móvil -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+
+</html>
