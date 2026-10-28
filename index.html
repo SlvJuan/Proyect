@@ -514,13 +514,14 @@
         <h3 class="text-xl font-bold dark:text-white text-[#030A1A] text-center mb-6">Conoce al equipo</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <!-- Juan Diego -->
-            <div
-                class="group reveal-left dark:bg-[#3C227A]/30 bg-white dark:border-[#3C227A] border-gray-200 border p-6 rounded-2xl shadow-sm hover:border-[#C8E34D] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#C8E34D]/20 text-center flex flex-col items-center">
+            <div role="link" tabindex="0" aria-label="Visitar GitHub de Juan Diego Silvestre Rubiano"
+                data-github="https://github.com/SlvJuan"
+                class="team-card cursor-pointer group reveal-left dark:bg-[#3C227A]/30 bg-white dark:border-[#3C227A] border-gray-200 border p-6 rounded-2xl shadow-sm hover:border-[#C8E34D] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#C8E34D]/20 text-center flex flex-col items-center">
                 <div
                     class="relative w-16 h-16 dark:bg-[#3C227A] bg-gray-100 text-[#C8E34D] border border-[#C8E34D]/30 font-bold text-xl rounded-full flex items-center justify-center mb-4 motion-safe:group-hover:animate-avatar-bounce after:absolute after:-inset-1 after:rounded-full after:border-2 after:border-[#C8E34D] after:opacity-0 motion-safe:group-hover:after:animate-ring-pulse">
                     JS
                 </div>
-                <h3 class="font-bold text-lg dark:text-white text-[#030A1A]"><a href="https://github.com/SlvJuan" target="_blank">Juan Diego Silvestre Rubiano</a></h3>
+                <h3 class="font-bold text-lg dark:text-white text-[#030A1A]">Juan Diego Silvestre Rubiano</h3>
                 <p class="text-xs text-[#C8E34D] font-medium uppercase tracking-wider mb-4">Desarrollador / Contacto</p>
                 <div class="space-y-2 text-sm dark:text-gray-300 text-gray-600 flex flex-col items-center">
                     <p class="flex items-center gap-2">
@@ -546,13 +547,14 @@
             </div>
 
             <!-- Kevin Andres -->
-            <div
-                class="group reveal-right dark:bg-[#3C227A]/30 bg-white dark:border-[#3C227A] border-gray-200 border p-6 rounded-2xl shadow-sm hover:border-[#C8E34D] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#C8E34D]/20 text-center flex flex-col items-center">
+            <div role="link" tabindex="0" aria-label="Visitar GitHub de Kevin Andres Villanueva"
+                data-github="https://github.com/andresvibes"
+                class="team-card cursor-pointer group reveal-right dark:bg-[#3C227A]/30 bg-white dark:border-[#3C227A] border-gray-200 border p-6 rounded-2xl shadow-sm hover:border-[#C8E34D] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#C8E34D]/20 text-center flex flex-col items-center">
                 <div
                     class="relative w-16 h-16 dark:bg-[#3C227A] bg-gray-100 text-[#C8E34D] border border-[#C8E34D]/30 font-bold text-xl rounded-full flex items-center justify-center mb-4 motion-safe:group-hover:animate-avatar-bounce after:absolute after:-inset-1 after:rounded-full after:border-2 after:border-[#C8E34D] after:opacity-0 motion-safe:group-hover:after:animate-ring-pulse">
                     KV
                 </div>
-                <h3 class="font-bold text-lg dark:text-white text-[#030A1A]"><a href="https://github.com/andresvibes" target="_blank">Kevin Andres Villanueva</a></h3>
+                <h3 class="font-bold text-lg dark:text-white text-[#030A1A]">Kevin Andres Villanueva</h3>
                 <p class="text-xs text-[#C8E34D] font-medium uppercase tracking-wider mb-4">Desarrollador / Contacto</p>
                 <div class="space-y-2 text-sm dark:text-gray-300 text-gray-600 flex flex-col items-center">
                     <p class="flex items-center gap-2">
@@ -571,8 +573,7 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                             </path>
                         </svg>
-                        <a href=""
-                            class="hover:text-[#C8E34D] transition-colors break-all">andres2764279@gmail.com</a>
+                        <a href="" class="hover:text-[#C8E34D] transition-colors break-all">andres2764279@gmail.com</a>
                     </p>
                 </div>
             </div>
@@ -588,6 +589,27 @@
 
     <script>
         const htmlElement = document.documentElement;
+
+        /* ---------- Tarjetas del equipo: abrir GitHub al pulsar el cuadro ---------- */
+        document.querySelectorAll('.team-card').forEach(card => {
+            function openGithub() {
+                window.open(card.dataset.github, '_blank', 'noopener,noreferrer');
+            }
+
+            card.addEventListener('click', event => {
+                // Los enlaces de teléfono y correo conservan su funcionamiento.
+                if (event.target.closest('a')) return;
+                openGithub();
+            });
+
+            card.addEventListener('keydown', event => {
+                if (event.target !== card) return;
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openGithub();
+                }
+            });
+        });
 
         /* ---------- Tema claro / oscuro ---------- */
         function updateImages() {
